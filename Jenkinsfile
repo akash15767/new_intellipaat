@@ -56,7 +56,7 @@ pipeline {
 				expression { params.action == 'create' }
 			}
 	        steps {
-	            sh '/path/to/ansible-playbook /var/lib/jenkins/workspace/Test/server_setup.yml'
+	             sh 'ansible-playbook ${WORKSPACE}/server_setup.yml'
 			}
 		}
 	    stage("Create deployment") {
