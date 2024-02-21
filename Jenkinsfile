@@ -56,7 +56,7 @@ pipeline {
 				expression { params.action == 'create' }
 			}
 	        steps {
-	            sh 'ansible-playbook ${WORKSPACE}/kubernetes-configmap-reload/server_setup.yml'
+	            sh 'ansible-playbook ${WORKSPACE}/server_setup.yml'
 			}
 		}
 	    stage("Create deployment") {
