@@ -22,7 +22,7 @@ pipeline {
             steps {
                 gitCheckout(
                     branch: "main",
-                    url: "https://github.com/praveen1994dec/spring-cloud-kubernetes.git"
+                    url: "https://github.com/akash15767/new_intellipaat.git"
                 )
             }
         }
