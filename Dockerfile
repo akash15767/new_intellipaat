@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-alpine
-COPY ./target/*.jar app.jar
-ENV JAVA_OPTS=""
-ENTRYPOINT exec java -jar app.jar --info
+FROM ubuntu
+RUN apt update
+RUN apt install apache2 -y
+COPY . /var/www/html
+ENTRYPOINT apachectl -D FOREGROUND
