@@ -26,16 +26,16 @@ pipeline {
                 )
             }
         }
-        stage('Build Maven'){
-            when {
-				expression { params.action == 'create' }
-			}
-    		steps {
-        		dir("${params.AppName}") {
-        			sh 'mvn clean package'
-        		}
-    		}
-	    }
+      //  stage('Build Maven'){
+       //     when {
+	//			expression { params.action == 'create' }
+	//		}
+    	//	steps {
+        //		dir("${params.AppName}") {
+        //			sh 'mvn clean package'
+        //		}
+    	//	}
+	  //  }
 	    stage("Docker Build and Push") {
 	        when {
 				expression { params.action == 'create' }
